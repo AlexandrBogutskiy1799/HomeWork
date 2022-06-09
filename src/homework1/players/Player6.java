@@ -3,9 +3,8 @@ package homework1.players;
 import java.util.Random;
 
 public class Player6 extends BasicPlayer {
-    private String[] playlist;
-
-    final int price;
+    private String[] playlist = {"song1", "song2", "song3", "song4"};
+    private final int price;
 
     public Player6(int price) {
         this.price = price;
@@ -24,9 +23,8 @@ public class Player6 extends BasicPlayer {
     }
 
     public void playSong() {
-        System.out.println("Playing: " + getSong());
+        System.out.println("Player6 playing : " + getSong());
     }
-
 
     public void shuffle() {
         Random rnd = new Random();
@@ -35,12 +33,13 @@ public class Player6 extends BasicPlayer {
             String temp = playlist[i];
             playlist[i] = playlist[j];
             playlist[j] = temp;
+            System.out.println();
         }
     }
 
     public void playAllSongs() {
         for (int i = 0; i < playlist.length; i++) {
-            System.out.println(playlist[i]);
+            System.out.println("Player6 playing : " + playlist[i]);
         }
     }
 }
